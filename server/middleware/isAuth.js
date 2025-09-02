@@ -13,7 +13,7 @@ try {
     }
     const verifyToken = await jwt.verify(token, process.env.JWT_SECRET)
 
-    req.userId = verifyToken.userId
+    req.user = verifyToken.userId
      next()
     } catch (error) {
         console.log(error)
